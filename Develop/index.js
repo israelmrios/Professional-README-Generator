@@ -30,7 +30,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Chose a license?",
-        choices: ["Mozilla Public License 2.0", "Apache License 2.0", "MIT License"],
+        choices: ["Mozilla Public License 2.0", "Apache License 2.0", "MIT License", new inquirer.Separator(), "NONE"],
     },
     {
         type: "input",
