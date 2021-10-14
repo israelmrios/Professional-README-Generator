@@ -1,11 +1,11 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if(license = "Mozilla Public License 2.0"){
+function renderLicenseBadge(data) {
+  if(data.choices = "Mozilla Public License 2.0"){
     return `![GitHub](https://img.shields.io/badge/license-MPL--2.0-orange?style=for-the-badge)`
-  }else if(license = "Apache License 2.0"){
+  }else if(data.choices = "Apache License 2.0"){
     return `![GitHub](https://img.shields.io/badge/license-Apache--2.0-orange?style=for-the-badge)`
-  }else if(license = "MIT License"){
+  }else if(data.choices = "MIT License"){
     return `![GitHub](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)`
   }else
   return ""
@@ -13,16 +13,40 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(data) {
+  if(data.choices = "Mozilla Public License 2.0"){
+    return `mplLICENSE.txt`
+  }else if(data.choices = "Apache License 2.0"){
+    return `apacheLICENSE.txt`
+  }else if(data.choices = "MIT License"){
+    return `mitLICENSE.txt`
+  }else
+  return ""
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(data) {
+  if(data.choices = "Mozilla Public License 2.0"){
+    return `## License
+    Copyright (c) 2021 Israel M RIos.
+    Licensed under the [MPL-2.0](${renderLicenseLink(data.license)}) license.`
+  }else if(data.choices = "Apache License 2.0"){
+    return `## License
+    Copyright (c) 2021 Israel M RIos.
+    Licensed under the [Apache-2.0](${renderLicenseLink(data.license)}) license.`
+  }else if(data.choices = "MIT License"){
+    return `## License
+    Copyright (c) 2021 Israel M RIos.
+    Licensed under the [MIT](${renderLicenseLink(data.license)}) license.`
+  }else
+  return ""
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
+  ${renderLicenseBadge()}
   
   ## Description
   ${data.description}
@@ -30,19 +54,16 @@ function generateMarkdown(data) {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
-  - [Questions](#questions)  
+  - [Questions](#questions)
+  - [License](#license)  
 
   ## Installation
   ${data.installation}
 
   ## Usage
   ${data.usage}
-
-  ## License
-  ${data.license}
 
   ## Contributing
   ${data.contributing}
@@ -55,8 +76,7 @@ function generateMarkdown(data) {
 
   For any additional questions please email me at ${data.email}.
 
-  // ## Badges
-  // ${data.badges}
+  ${renderLicenseSection()}
 `;
 }
 

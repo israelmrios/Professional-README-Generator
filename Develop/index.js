@@ -27,20 +27,14 @@ const questions = [
         message: "Provide instructions and/or short description on how to use this application?"
     },
     {
-        type: "list",
-        name: "license",
-        message: "Chose a license?",
-        choices: ["Mozilla Public License 2.0", "Apache License 2.0", "MIT License", new inquirer.Separator(), "NONE"],
-    },
-    {
         type: "input",
         name: "contributing",
-        message: "contribution guidelines",
+        message: "Please enter your contribution guidelines.",
     },
     {
         type: "input",
         name: "tests",
-        message: "test instructions",
+        message: "Please enter your test instructions.",
     },
     {
         type: "input",
@@ -51,6 +45,12 @@ const questions = [
         type: "input",
         name: "email",
         message: "Please enter your email where you can be contacted at for any questions reguarding this project.",
+    },
+    {
+        type: "list",
+        name: "license",
+        message: "Chose a license?",
+        choices: ["Mozilla Public License 2.0", "Apache License 2.0", "MIT License", new inquirer.Separator(), "NONE"],
     },
 ];
 
