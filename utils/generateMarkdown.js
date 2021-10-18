@@ -1,5 +1,5 @@
 // Choose to write down each link since each license is associated with a different URL
-function renderLicenseBadge(data) {
+function renderLicenseBadge(license) {
   if (license === "Mozilla Public 2.0") {
     return `![GitHub](https://img.shields.io/badge/license-MPL--2.0-orange?style=for-the-badge)`
   } else if (license === "Apache 2.0") {

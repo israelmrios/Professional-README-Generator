@@ -23,20 +23,27 @@ How to install this application and getting started:
 
 ## Usage
 
+You can view a Demo Video showing how to use this application by clicking on this link https://drive.google.com/file/d/1Dj73mUmigm1iWrt94vnL3khNbPc8gZS3/view?usp=sharing.
+
 ### Step 1
 * Invoke the following command on your integrated terminal:
 
 ```bash
 node index.js
 ```
+![Screenshot of the invoking command.](./assets/images/invoke-node-indexjs.png)
 
 ### Step 2
 * When prompted answer the questions to generate your projects README
 * When prompted to choose a license use the up/down arrows to select your elected license or NONE if choosing not to
 
+![Screenshot of prompt questions.](./assets/images/inquirer-prompts.png)
+
 ### Step 3
 * Check your current working directory to see the newly created file
 * Note: If you choose to run the application again it will overwrite your existing README file
+
+![Screenshot of new file added to the current working directory.](./assets/images/new-sample-readme.png)
 
 ## Contributing
 There are many ways in which you can participate in this project, for example:
@@ -51,5 +58,5 @@ To find more information and the repository on this project please visit my [Git
 For any additional questions please email me [here](mailto:israelm.riosjr@gmail.com).
 
 ## License
-Copyright (c) 2021 Israel M RIos.
-Licensed under the MIT license.
+Copyright (c) 2021 Israel M Rios.
+Licensed under the [MIT License](LICENSE).

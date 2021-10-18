@@ -13,10 +13,10 @@
   - [License](#license)
 
   ## Installation
-  How to install this application and getting started:
+  How to install this application and getting started
 
   ## Usage
-  * Invoke the following command on your integrated terminal:
+  * Invoke the following command on your integrated terminal
 
   ## Contributing
   There are many ways in which you can participate in this project, for example:
